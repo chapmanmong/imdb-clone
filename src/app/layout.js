@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header'
+import Navbar from '@/components/Navbar'
 import Providers from '@/components/Providers'
 
 import './globals.css'
@@ -17,7 +18,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Providers>
         <Header />
-        {/* Navbar */}
+        <Navbar />
         {/* Searchbar */}
         {children}
         </Providers>

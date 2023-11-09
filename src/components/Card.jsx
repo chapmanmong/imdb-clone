@@ -11,6 +11,9 @@ const Card = ({ result }) => {
     transition-shadow duration-200 group"
     >
       <Link href={`/movie/${result.id}`}>
+        <h2 className="truncate text-lg font-extrabold text-center">
+          {result.title || result.name}
+        </h2>
         <Image
           alt="image"
           src={`https://image.tmdb.org/t/p/original${
@@ -25,9 +28,6 @@ const Card = ({ result }) => {
         />
         <div className="p-2">
           <p className="line-clamp-3 text-md">{result.overview}</p>
-          <h2 className="truncate text-lg font-bold">
-            {result.title || result.name}
-          </h2>
           <p className="flex items-center">
             {result.release_date || result.first_air_date}
             <FiThumbsUp className="h-5 mr-1 ml-3" /> {result.vote_count}
